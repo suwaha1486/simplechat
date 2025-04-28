@@ -8,7 +8,7 @@ import os
 import urllib.request
 import urllib.error
 
-FASTAPI_ENDPOINT_URL = 'https://54f1-34-16-128-67.ngrok-free.app//generate'
+FASTAPI_ENDPOINT_URL = 'https://54f1-34-16-128-67.ngrok-free.app/generate'
 
 # # Lambda コンテキストからリージョンを抽出する関数
 # def extract_region_from_arn(arn):
