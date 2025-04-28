@@ -78,7 +78,7 @@ def lambda_handler(event, context):
             print(f'Calling FastAPI endpoint: {FASTAPI_ENDPOINT_URL} with prompt: {message[:100]}...')
 
             # 3. APIを呼び出し，レスポンスを取得（タイムアウトを設定）
-            with urllib.request.urlopen(req, timeout=60) as response:
+            with urllib.request.urlopen(req, timeout=300) as response:
                 response_status = response.getcode()
                 print(f'FastAPI response status: {response_status}')
                 if 200 <= response_status < 300:
