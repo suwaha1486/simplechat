@@ -8,7 +8,7 @@ import os
 import urllib.request
 import urllib.error
 
-FASTAPI_ENDPOINT_URL = 'https://54f1-34-16-128-67.ngrok-free.app/generate'
+FASTAPI_ENDPOINT_URL = 'https://48e6-34-16-151-166.ngrok-free.app/generate'
 API_CALL_TIMEOUT = 180
 
 def lambda_handler(event, context):
