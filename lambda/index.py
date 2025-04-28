@@ -93,17 +93,6 @@ def lambda_handler(event, context):
                     if not assistant_response:
                          print("Warning: 'generated_text' not found in FastAPI response.")
                          assistant_response = "Error: Could not parse response from custom model API."
-                    else:
-                        error_message = f"Error: Custom model API returned status code {response_status}."
-                    
-                        try:
-                            # エラーレスポンスの内容も表示試行
-                            error_body = response.read().decode('utf-8')
-                            error_message += f" Body: {error_body}"
-                        except Exception:
-                            pass # エラーボディ読み取り失敗は無視
-                        print(error_message)
-                        assistant_response = error_message
         
         except urllib.error.HTTPError as e:
             # HTTPエラー (4xx, 5xx など)
